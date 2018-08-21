@@ -11,3 +11,8 @@ Machine Learning algorithms
 1. Linear Regression
 2. Logistic Regression (Classification)
 3. Support Vector Machine (Classification)
+
+Machine Learning exercises
+![](https://github.com/richmondu/MachineLearning/tree/master/exercises/1_linear_regression.png)
+![](https://github.com/richmondu/MachineLearning/tree/master/exercises/2_logistic_regression.png)
+![](https://github.com/richmondu/MachineLearning/tree/master/exercises/3_support_vector_machine.png)
