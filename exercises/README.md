@@ -11,7 +11,7 @@
 1. Linear Regression
 2. Logistic Regression (Classification)
 3. Support Vector Machine (Classification)
-4. Isolation Forest and One Class SVM (Anomaly Detection)
+4. Anomaly Detection using Isolation Forest or Elliptic Envelop or One Class SVM
 
 ### Machine Learning exercises
 

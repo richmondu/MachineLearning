@@ -4,8 +4,10 @@ import pandas # Python Data Analysis library
 import matplotlib.pyplot as plot # Python 2D Plotting library
 import matplotlib.patches as patch # Python 2D Plotting library
 from sklearn.model_selection import train_test_split, GridSearchCV
+
 from sklearn import svm # Python Machine Learning library
 from sklearn.ensemble import IsolationForest
+from sklearn.covariance import EllipticEnvelope
 
 
 
@@ -59,8 +61,9 @@ x_values_train = x_values[:]
 #x_values_test = x_values[:]
 
 # Create a IsolationForest OutlierDetection/AnomalyDetection classifier
-# Note: can also use OneClassSVM
-# clf = svm.OneClassSVM(nu=0.03, kernel="rbf", gamma=0.1)
+# Note: can use OneClassSVM, EllipticEnvelope or IsolationForest
+#clf = svm.OneClassSVM(nu=0.03, kernel="rbf", gamma=0.1)
+#clf = EllipticEnvelope(contamination=0.019)
 clf = IsolationForest(contamination=0.03) #contamination=0.017)
 clf.fit(dataframe)
 pred = clf.predict(dataframe)
