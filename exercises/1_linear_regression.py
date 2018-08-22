@@ -48,10 +48,12 @@ print('Coefficients: ', regression.coef_)
 print('Mean squared error: ', mean_squared_error(y_values_validation, y_values_predict))
 print('Variance score: ', r2_score(y_values_validation, y_values_predict)) # 1 is perfect prediction)
 
+# predict some values
+predict(3.5)
+predict(7)
+predict(15)
+
 # visualize training, testing and precition data sets using matplotlib
 plot_data()
 
-# predict some values
-predict(5)
-predict(15)
-predict(25)
+

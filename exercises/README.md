@@ -8,7 +8,7 @@
 4. numpy Scientific Computing library
 
 ### Machine Learning algorithms
-1. Linear Regression
+1. Linear Regression and Polynomial Regression
 2. Logistic Regression (Classification)
 3. Support Vector Machine (Classification)
 4. Anomaly Detection using Isolation Forest or Elliptic Envelop or One Class SVM
@@ -17,6 +17,8 @@
 ### Machine Learning exercises
 
 ![](https://github.com/richmondu/MachineLearning/blob/master/exercises/1_linear_regression.png)
+
+![](https://github.com/richmondu/MachineLearning/blob/master/exercises/1_polynomial_regression.png)
 
 ![](https://github.com/richmondu/MachineLearning/blob/master/exercises/2_logistic_regression.png)
 

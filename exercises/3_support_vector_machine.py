@@ -8,9 +8,8 @@ from sklearn import svm # Python Machine Learning library
 
 
 
-def plot_decision_function_helper(X, y, clf):
+def plot_decision_boundary(X, y, clf):
   
-	plot.scatter(X[:, 0], X[:, 1], c = np.where(y == 1,'g','r'), edgecolors='black')
 	ax = plot.gca()
 	xlim = ax.get_xlim()
 	ylim = ax.get_ylim()
@@ -41,7 +40,9 @@ def plot_data(title, xlabel, ylabel, oklegend, nglegend, X, y, clf):
 	plot.xlabel(xlabel)
 	plot.ylabel(ylabel)
 	
-	plot_decision_function_helper(X, y, clf)
+	plot.scatter(X[:, 0], X[:, 1], c = np.where(y == 1,'g','r'), edgecolors='black')
+	
+	plot_decision_boundary(X, y, clf)
 	
 	legend_ok = patch.Patch(label=oklegend, color='green', edgecolor='black')
 	legend_ng = patch.Patch(label=nglegend, color='red', edgecolor='black')

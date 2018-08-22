@@ -2,6 +2,7 @@ import sys, os
 import numpy as np # Scientific Computing library
 import pandas # Python Data Analysis library
 import matplotlib.pyplot as plot # Python 2D Plotting library
+import matplotlib.tri as tri
 from sklearn.cluster import KMeans
 
 
@@ -21,7 +22,7 @@ def plot_data(title, xlabel, ylabel, oklegend, nglegend, X, clf):
 
 
 # read data and filter using pandas
-dataframe = pandas.read_csv('5_kmeans_clustering.csv')
+dataframe = pandas.read_csv('5_kmeans_clustering_data.csv')
 x_values = dataframe[['x', 'y']]
 x_values_train = x_values[:]
 #x_values_test = x_values[:]
