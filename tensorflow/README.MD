@@ -26,27 +26,27 @@ https://github.com/tensorflow/docs/blob/master/site/en/tutorials/keras/index.md
 
 
 # Build the model
-//cp_callback = tf.keras.callbacks.ModelCheckpoint("training_1/cp.ckpt", save_weights_only=True, verbose=1)
-model = keras.Sequential()
-model.add(keras.layers.Flatten(input_shape=(x, y))) // transforms format to a 1-d array
-model.add(keras.layers.Dense(num_nodes, activation))   // densely-connected, or fully-connected
-//model.add(keras.layers.Dropout(0.5)) // dropout for regularization (prevent overfitting)
-//model.add(keras.layers.Dense(num_nodes, activation, kernel_regularizer=keras.regularizers.l2(0.001))) // l2 regularization (prevent overfitting)
-model.summary()
-model.compile(optimizer, loss, metrics)
+    //cp_callback = tf.keras.callbacks.ModelCheckpoint("training_1/cp.ckpt", save_weights_only=True, verbose=1)
+    model = keras.Sequential()
+    model.add(keras.layers.Flatten(input_shape=(x, y))) // transforms format to a 1-d array
+    model.add(keras.layers.Dense(num_nodes, activation))   // densely-connected, or fully-connected
+    //model.add(keras.layers.Dropout(0.5)) // dropout for regularization (prevent overfitting)
+    //model.add(keras.layers.Dense(num_nodes, activation, kernel_regularizer=keras.regularizers.l2(0.001))) // l2 regularization (prevent overfitting)
+    model.summary()
+    model.compile(optimizer, loss, metrics)
 
 # Train the model or load a saved model
-early_stop = keras.callbacks.EarlyStopping(monitor='val_loss', patience=10) *** Early stopping
-model.fit(train_images, train_labels, epochs=5, batch_size=512, callbacks=[cp_callback, early_stop, PrintDot()]) *** Checkpoint callback, Early stopping callback
-//model.load_weights(checkpoint_path) // load a saved checkpoint model instead of train/fit
+    early_stop = keras.callbacks.EarlyStopping(monitor='val_loss', patience=10) *** Early stopping
+    model.fit(train_images, train_labels, epochs=5, batch_size=512, callbacks=[cp_callback, early_stop, PrintDot()]) *** Checkpoint   callback, Early stopping callback
+    //model.load_weights(checkpoint_path) // load a saved checkpoint model instead of train/fit
 
 # Evaluate accuracy
-test_loss, test_acc = model.evaluate(test_images, test_labels)
-loss, mae, mse = model.evaluate(normed_test_data, test_labels)
+    test_loss, test_acc = model.evaluate(test_images, test_labels)
+    loss, mae, mse = model.evaluate(normed_test_data, test_labels)
 
 # Make predictions
-predictions = model.predict(test_images)
-print("Prediction: " + str(np.argmax(predictions[0])) )
+    predictions = model.predict(test_images)
+    print("Prediction: " + str(np.argmax(predictions[0])) )
 
 
 
@@ -69,9 +69,9 @@ print("Prediction: " + str(np.argmax(predictions[0])) )
 2. mae, mse - for regression problems
 
 # Techniques:
-Early stopping is a useful technique to prevent overfitting.
-If there is not much training data, one technique is to prefer a small network with few hidden layers to avoid overfitting.
-Deep learning models tend to be good at fitting to the training data, but the real challenge is generalization, not fitting.
+1. Early stopping is a useful technique to prevent overfitting.
+2. If there is not much training data, one technique is to prefer a small network with few hidden layers to avoid overfitting.
+3. Deep learning models tend to be good at fitting to the training data, but the real challenge is generalization, not fitting.
 
 
 # Overfitting and Underfitting
